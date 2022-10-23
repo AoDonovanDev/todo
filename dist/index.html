@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="garden">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,88 @@
     <link href = "./output.css" rel = "stylesheet">
 </head>
 <body>
-    <h1 class="space-y-6 py-8 text-base leading-7 text-gray-600">
-        this is built using html and javascript
-    </h1>
+   <div class="containerBoy">
+      <!-- navbar -->
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl">todoPlus</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input type="text" placeholder="Search tasks" class="input input-bordered" />
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="https://placeimg.com/80/80/people" />
+              </div>
+            </label>
+            <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+         <!-- sidebar -->
+         <div class="sidebar">
+            <ul class="menu bg-base-100 w-56" id="sdSpacer">
+               <div>
+                  <li><a class="active navBtn" id = "today">Today</a></li>
+                  <li><a class="navBtn" id = "project1">Project 1</a></li>
+                  <li><a class="navBtn" id = "project2">Project 2</a></li>
+                  <div id = "projQ"></div>
+               </div>
+               <div>
+                  <div class="dropdown w-56 dropdown-top" id = "newProj">
+                     <label tabindex="0" class="btn m-2">New Project</label>
+                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                       <li><div class="form-control">
+                        <div class="input-group">
+                          <input type="text" placeholder="Project Name" class="input input-bordered inputSpacer" id="projName">
+                          <button class="btn-md btn-square btn btn-outline" id = "newProjBtn">
+                           <img src = "../src/plus.svg" alt = "add new" class="addNew">
+                        </button>
+                        </div>
+                      </div></li>
+                     </ul>
+                   </div>
+               </div>
+            </ul>
+         </div>
+         <div id= "taskArea">
+          <!--<div class="form-control checklist">
+            <label class="label cursor-pointer">
+              <input type="checkbox" class="checkbox checkbox-primary" />
+              <span class="label-text" id="taskLabel"></span>
+            </label>
+            </div>  -->
+         </div>
+          <div class="hero">
+             <!-- hero -->
+             <div class="card w-96 bg-base-100 shadow-xl">
+               <div class="card-body">
+                 <h2 class="card-title">Add a task</h2>
+                  <div class="newInput">
+                    <input type="text" placeholder="Scrub your inputs..." class="input input-bordered w-full max-w-xs" id = "taskName"/>
+                                     <div class="card-actions justify-end">
+                    <button class="btn-md btn-square btn btn-outline" id = "newTaskBtn">
+                       <img src = "../src/plus.svg" alt = "add new" class="addNew">
+                    </button>
+                  </div>
+                 </div>
+               </div>
+             </div>
+          </div>
+      </div>
+   </div>
     <script src = "main.js"></script>
 </body>
 </html>

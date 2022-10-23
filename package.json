@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AoDonovanDev/todo#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "daisyui": "^2.31.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.1.8",
