@@ -30,7 +30,7 @@ export function domDisplay(taskList, currentProject){
 }
   list.forEach(element => generateElements(element.taskName));
 }
-function removeAllChildNodes(parent) {
+export function removeAllChildNodes(parent) {
   while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
   }
