@@ -54,3 +54,12 @@
     gap: 8px;
     padding-bottom: 6%;
 }
+.taskComplete{
+    text-decoration: line-through;
+    opacity: 0.5;
+    animation: strike 2s linear;
+}
+@keyframes strike {
+    from { text-decoration-color: transparent; }
+    to { text-decoration-color: auto; }
+  }

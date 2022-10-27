@@ -17,7 +17,7 @@ const taskController = (() => {
     project, taskList, taskRemove,
 };
 })();
-function storageManager() {
+function saveState() {
   localStorage.setItem('saveState', JSON.stringify(taskController.taskList));
 }
 export function pageSelect() {
@@ -52,7 +52,7 @@ function taskCreate() {
   taskController.taskList.push(taskObj);
   taskName.value = '';
   domDisplay(taskController.taskList, taskController.project);
-  storageManager();
+  saveState();
   taskSet();
 }
 function projCreate() {
@@ -61,8 +61,13 @@ function projCreate() {
 }
 export function removeTask() {
   const isMatch = (element) => element.taskName === this.dataset.label;
-  const listIndex = taskController.taskList.findIndex(isMatch);
-  taskController.taskRemove(listIndex);
-  domDisplay(taskController.taskList, taskController.project);
-  storageManager();
+  const taskText = document.getElementById(this.dataset.label);
+  taskText.addEventListener("animationend", removeObject);
+  taskText.classList.add("taskComplete");
+  function removeObject(){
+    const listIndex = taskController.taskList.findIndex(isMatch);
+    taskController.taskRemove(listIndex);
+    domDisplay(taskController.taskList, taskController.project);
+    saveState();
+  }
 }

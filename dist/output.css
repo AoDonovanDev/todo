@@ -3225,10 +3225,6 @@ body[dir="rtl"] .checkbox:checked,
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .main{
   display: flex;
   background-color: hsl(var(--s));
@@ -3288,4 +3284,20 @@ body[dir="rtl"] .checkbox:checked,
   align-content: start;
   gap: 8px;
   padding-bottom: 6%;
+}
+
+.taskComplete{
+  text-decoration: line-through;
+  opacity: 0.5;
+  animation: strike 2s linear;
+}
+
+@keyframes strike {
+  from {
+    text-decoration-color: transparent;
+  }
+
+  to {
+    text-decoration-color: auto;
+  }
 }
