@@ -3286,18 +3286,25 @@ body[dir="rtl"] .checkbox:checked,
   padding-bottom: 6%;
 }
 
+.fadey{
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+
 .taskComplete{
   text-decoration: line-through;
-  opacity: 0.5;
-  animation: strike 2s linear;
+  animation: strike 2s;
+  opacity: 0.1;
 }
 
 @keyframes strike {
   from {
     text-decoration-color: transparent;
+    opacity: 1;
   }
 
   to {
     text-decoration-color: auto;
+    opacity: 0;
   }
 }

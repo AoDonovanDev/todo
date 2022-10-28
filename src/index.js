@@ -61,6 +61,7 @@ function projCreate() {
 }
 export function removeTask() {
   const isMatch = (element) => element.taskName === this.dataset.label;
+  this.classList.add("fadey");
   const taskText = document.getElementById(this.dataset.label);
   taskText.addEventListener("animationend", removeObject);
   taskText.classList.add("taskComplete");
