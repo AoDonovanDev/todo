@@ -1,4 +1,3 @@
-import {format} from 'date-fns';
 import './input.css';
 import { domDisplay, projManager, removeAllChildNodes } from './dombuilder.js';
 
@@ -73,4 +72,3 @@ export function removeTask() {
     domDisplay(taskController.taskList, taskController.project);
   }
 }
-console.log(format(new Date(), 'yyyy-MM-dd'));

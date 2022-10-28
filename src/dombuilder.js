@@ -1,4 +1,5 @@
 import { pageSelect, removeTask } from './index.js';
+import {differenceInCalendarQuarters, format} from 'date-fns';
 export function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -45,4 +46,9 @@ export function projManager(projName) {
   listItem.appendChild(anchor);
   projQ.appendChild(listItem);
   anchor.click();
+}
+let calendar = document.getElementById("datePicker");
+calendar.value = format(new Date(), 'yyyy-MM-dd');
+calendar.onchange = function(){
+  projManager(calendar.value);
 }
