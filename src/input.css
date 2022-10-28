@@ -60,7 +60,7 @@
 }
 .taskComplete{
     text-decoration: line-through;
-    animation: strike 2s;
+    animation: strike 1s;
     opacity: 0.1;
 }
 @keyframes strike {

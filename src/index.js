@@ -1,3 +1,4 @@
+import {format} from 'date-fns';
 import './input.css';
 import { domDisplay, projManager, removeAllChildNodes } from './dombuilder.js';
 
@@ -60,15 +61,16 @@ function projCreate() {
   document.getElementById('projName').value = '';
 }
 export function removeTask() {
-  const isMatch = (element) => element.taskName === this.dataset.label;
   this.classList.add("fadey");
   const taskText = document.getElementById(this.dataset.label);
-  taskText.addEventListener("animationend", removeObject);
+  taskText.addEventListener("animationend", updateDom);
   taskText.classList.add("taskComplete");
-  function removeObject(){
-    const listIndex = taskController.taskList.findIndex(isMatch);
-    taskController.taskRemove(listIndex);
+  const isMatch = (element) => element.taskName === this.dataset.label;
+  const listIndex = taskController.taskList.findIndex(isMatch);
+  taskController.taskRemove(listIndex);
+  saveState();
+  function updateDom(){
     domDisplay(taskController.taskList, taskController.project);
-    saveState();
   }
 }
+console.log(format(new Date(), 'yyyy-MM-dd'));
