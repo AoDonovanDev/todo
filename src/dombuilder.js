@@ -56,14 +56,22 @@ calendar.onchange = function(){
 document.getElementById("gardenTheme").addEventListener("click", gardenSelect);
 function gardenSelect(){
   document.documentElement.setAttribute("data-theme", "garden");
-  console.log("garden");
+  saveTheme("garden");
 }
 document.getElementById("lofiTheme").addEventListener("click", lofiSelect);
 function lofiSelect(){
   document.documentElement.setAttribute("data-theme", "lofi");
-  console.log("lofi");
+  saveTheme("lofi");
 }
 document.getElementById("corporateTheme").addEventListener("click", corporateSelect);
 function corporateSelect(){
-  document.documentElement.setAttribute("data-theme", "corporate");
+  document.documentElement.setAttribute("data-theme", "corporate")
+  saveTheme("lofi");
+}
+function saveTheme(theme){
+  localStorage.setItem("theme", JSON.stringify(theme));
+}
+let checkTheme = localStorage.getItem("theme");
+if(checkTheme != null){
+  document.documentElement.setAttribute("data-theme", JSON.parse(checkTheme));
 }
