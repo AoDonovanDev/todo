@@ -12,10 +12,7 @@
 .hero{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    align-items: center;
-    height: 92vh;
+    /* justify-content: flex-end; */
 }
 .addNew{
     height: 100%;
@@ -47,7 +44,14 @@
 .clipboard{
     display: flex;
     flex-direction: column;
+    flex:1;
     justify-content: space-between;
+}
+.boardWrap{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
 }
 .taskLabel{
     display: grid;
