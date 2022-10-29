@@ -3,7 +3,7 @@
 @tailwind utilities;
 .main{
     display: flex;
-    background-color: hsl(var(--s));
+    background-color: hsl(var(--nc));
     flex: 1;
 }
 .sidebar{

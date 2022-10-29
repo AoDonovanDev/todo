@@ -1,5 +1,5 @@
 import { pageSelect, removeTask } from './index.js';
-import {differenceInCalendarQuarters, format} from 'date-fns';
+import {format} from 'date-fns';
 export function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -51,4 +51,19 @@ let calendar = document.getElementById("datePicker");
 calendar.value = format(new Date(), 'yyyy-MM-dd');
 calendar.onchange = function(){
   projManager(calendar.value);
+}
+
+document.getElementById("gardenTheme").addEventListener("click", gardenSelect);
+function gardenSelect(){
+  document.documentElement.setAttribute("data-theme", "garden");
+  console.log("garden");
+}
+document.getElementById("lofiTheme").addEventListener("click", lofiSelect);
+function lofiSelect(){
+  document.documentElement.setAttribute("data-theme", "lofi");
+  console.log("lofi");
+}
+document.getElementById("corporateTheme").addEventListener("click", corporateSelect);
+function corporateSelect(){
+  document.documentElement.setAttribute("data-theme", "corporate");
 }
