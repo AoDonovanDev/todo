@@ -66,7 +66,7 @@ function lofiSelect(){
 document.getElementById("corporateTheme").addEventListener("click", corporateSelect);
 function corporateSelect(){
   document.documentElement.setAttribute("data-theme", "corporate")
-  saveTheme("lofi");
+  saveTheme("corporate");
 }
 function saveTheme(theme){
   localStorage.setItem("theme", JSON.stringify(theme));
