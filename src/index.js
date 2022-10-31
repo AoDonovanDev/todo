@@ -48,16 +48,20 @@ function taskSet() {
   }
 }
 function taskCreate() {
+  if(taskName.value != ""){
   const taskObj = new NewTask(taskController.project, taskName.value);
   taskController.taskList.push(taskObj);
   taskName.value = '';
   domDisplay(taskController.taskList, taskController.project);
   saveState();
   taskSet();
+  }
 }
 function projCreate() {
+  if(document.getElementById('projName').value != ""){
   projManager(document.getElementById('projName').value);
   document.getElementById('projName').value = '';
+  }
 }
 export function removeTask() {
   this.classList.add("fadey");
