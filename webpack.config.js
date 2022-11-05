@@ -2,7 +2,7 @@ const path = require('path');
 module.exports = {
   entry: {
     index: './src/index.js',
-    splash: "./src/splash.js"
+    splash: './src/splash.js'
   },
   output: {
     filename: '[name].js',

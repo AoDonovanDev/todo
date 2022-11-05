@@ -76,3 +76,4 @@ export function removeTask() {
     domDisplay(taskController.taskList, taskController.project);
   }
 }
+console.log("updateeeeee");

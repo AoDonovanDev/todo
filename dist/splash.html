@@ -17,24 +17,26 @@
             </div>
             <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
               <div class="card-body">
-                <form novalidate>
+                <form novalidate id = "loginForm">
                   <div class="form-control">
                     <label class="label">
                       <span class="label-text">Username</span>
+                      <span class = "errorMsg hidden" id ="usernameError">Username Please!</span>
                     </label>
-                    <input type="text" placeholder="username" class="input input-bordered" required/>
+                    <input id = "username" type="text" placeholder="username" class="input input-bordered" required/>
                   </div>
                   <div class="form-control">
                     <label class="label">
                       <span class="label-text">Password</span>
+                      <span class = "errorMsg hidden" id = "passwordError">Password please!</span>
                     </label>
-                    <input type="password" placeholder="password" class="input input-bordered" required/>
+                    <input id = "password" type="password" placeholder="password" class="input input-bordered" required/>
                     <label class="label">
                       <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                   </div>
                   <div class="form-control mt-6">
-                    <button class="btn btn-primary" type = "submit">Login</button>
+                    <button class="btn btn-primary" type = "button" id = "submit">Login</button>
                   </div>
                 </form>
               </div>

@@ -3379,6 +3379,10 @@ body[dir="rtl"] .checkbox:checked,
   margin-top: 1.5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -3611,6 +3615,15 @@ body[dir="rtl"] .checkbox:checked,
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.errorMsg{
+  color: red;
+  font-weight: bold;
+}
+
+.errorBorder{
+  border-color: red;
 }
 
 @media (min-width: 1024px) {
