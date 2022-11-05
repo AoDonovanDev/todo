@@ -5,17 +5,26 @@ let password = document.getElementById("password");
 let userError = document.getElementById("usernameError");
 let passError = document.getElementById("passwordError");
 let submitBtn = document.getElementById("submit");
+let userBoxes = document.querySelectorAll(".userbox");
 submit.addEventListener("click", validate);
+userBoxes.forEach(element => element.addEventListener("input", updateDom));
 function validate(){
     if(username.checkValidity() == false){
-        userError.classList.toggle("hidden");
+        userError.classList.remove("hidden");
         username.classList.add("errorBorder");
     };
     if(password.checkValidity() == false){
-        passError.classList.toggle("hidden");
+        passError.classList.remove("hidden");
         password.classList.add("errorBorder");
     }
     if(username.checkValidity() == true && password.checkValidity() == true){
         console.log("g2g");
+        window.location.href = "./index.html"
+    }
+}
+function updateDom(){
+    if(this.checkValidity() == true){
+        this.style.borderColor = "green";
+        document.getElementById(this.dataset.msg).classList.add("hidden");
     }
 }
