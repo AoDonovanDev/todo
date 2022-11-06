@@ -7,7 +7,7 @@ const newTaskBtn = document.getElementById('newTaskBtn');
 const newProjBtn = document.getElementById('newProjBtn');
 window.addEventListener('load', taskSet);
 navBtns.forEach((element) => element.addEventListener('click', pageSelect));
-newTaskBtn.addEventListener('click', taskCreate);
+ newTaskBtn.addEventListener('click', taskCreate); 
 newProjBtn.addEventListener('click', projCreate);
 const taskController = (() => {
   const project = 'Today';
@@ -56,6 +56,12 @@ function taskCreate() {
   saveState();
   taskSet();
   }
+  newTaskBtn.classList.add("btnBump");
+  document.addEventListener("animationend", bump);
+  function bump(){
+    document.getElementById("xout").click();
+    document.removeEventListener("animationend", bump, false);
+  }
 }
 function projCreate() {
   if(document.getElementById('projName').value != ""){
@@ -76,4 +82,3 @@ export function removeTask() {
     domDisplay(taskController.taskList, taskController.project);
   }
 }
-console.log("updateeeeee");
