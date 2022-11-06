@@ -3622,10 +3622,6 @@ body[dir="rtl"] .checkbox:checked,
   font-weight: bold;
 }
 
-.errorBorder{
-  border-color: red;
-}
-
 @media (min-width: 1024px) {
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;

@@ -11,11 +11,11 @@ userBoxes.forEach(element => element.addEventListener("input", updateDom));
 function validate(){
     if(username.checkValidity() == false){
         userError.classList.remove("hidden");
-        username.classList.add("errorBorder");
+        username.style.borderColor = "red";
     };
     if(password.checkValidity() == false){
         passError.classList.remove("hidden");
-        password.classList.add("errorBorder");
+        password.style.borderColor = "red";
     }
     if(username.checkValidity() == true && password.checkValidity() == true){
         console.log("g2g");
