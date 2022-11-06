@@ -38,7 +38,7 @@
     <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2" id = "xout">✕</label>
     <div class="modBtm">
       <input type="text" placeholder="New Todo" class="input input-bordered w-full max-w-xs inputSpacer" id = "taskName"/>
-      <img src = "../src/plus.svg" alt = "add new" class="addNew btn-md btn-square btn btn-outline" id = "newTaskBtn">
+      <img src = "../src/plus.svg" alt = "add new" class="addNew btn-md btn-square btn btn-outline" id = "newTaskBtn" tabindex="0">
     </div>
   </div>
 </div>
@@ -73,10 +73,11 @@
           </div>
         </div>
       </div>
+      <div class="myDivider"></div>
       <div class="main">
          <!-- sidebar -->
          <div class="sidebar">
-            <ul class="menu bg-base-100 w-56" id="sdSpacer">
+            <ul class="menu bg-base-100 w-46" id="sdSpacer">
                <div>
                 <div class="form-control">
                   <input type="date" placeholder="today" class="input input-bordered" id = "datePicker"/>
@@ -85,7 +86,7 @@
                 </div>
                </div>
                <div>
-                  <div class="dropdown w-56 dropdown-top" id = "newProj">
+                  <div class="dropdown w-46 dropdown-top" id = "newProj">
                      <label tabindex="0" class="btn m-2">New Project</label>
                      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                        <li><div class="form-control">
