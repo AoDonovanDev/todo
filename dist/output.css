@@ -3529,6 +3529,7 @@ body[dir="rtl"] .checkbox:checked,
   flex-direction: column;
   justify-content: space-between;
   flex:1;
+  margin-top: 2%;
 }
 
 .inputSpacer{
@@ -3546,6 +3547,7 @@ body[dir="rtl"] .checkbox:checked,
   flex-direction: column;
   flex:1;
   justify-content: space-between;
+  padding-top: 2%;
 }
 
 .boardWrap{
