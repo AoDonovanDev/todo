@@ -3607,7 +3607,7 @@ body[dir="rtl"] .checkbox:checked,
 
 #datePicker{
   display: flex;
-  width: 100%;
+  flex: 1;
 }
 
 @keyframes clickey{
