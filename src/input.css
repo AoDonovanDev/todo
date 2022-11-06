@@ -9,6 +9,7 @@
     flex:1;
     background-color: hsl(var(--nc));
     padding-top: 2%;
+    height: 99vh;
 }
 .sidebar{
     display: flex;
