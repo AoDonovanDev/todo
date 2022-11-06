@@ -3363,8 +3363,8 @@ body[dir="rtl"] .checkbox:checked,
   top: 0.5rem;
 }
 
-.m-2 {
-  margin: 0.5rem;
+.m-3 {
+  margin: 0.75rem;
 }
 
 .mt-3 {
@@ -3397,6 +3397,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .w-52 {
   width: 13rem;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .max-w-xs {
@@ -3500,19 +3504,13 @@ body[dir="rtl"] .checkbox:checked,
 
 :root{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: 100vh;
-}
-
-.body{
-  height: 100vh;
 }
 
 .main{
   display: flex;
   flex:1;
   background-color: hsl(var(--nc));
-  padding-top: 2%;
-  height: 99vh;
+  height: 88vh;
 }
 
 .sidebar{
@@ -3523,12 +3521,14 @@ body[dir="rtl"] .checkbox:checked,
 #newProj{
   display: flex;
   flex-direction: column;
+  flex:1;
 }
 
 #sdSpacer{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex:1;
 }
 
 .inputSpacer{
@@ -3608,6 +3608,8 @@ body[dir="rtl"] .checkbox:checked,
 #datePicker{
   display: flex;
   flex: 1;
+  justify-content: center;
+  align-self: center;
 }
 
 @keyframes clickey{
@@ -3639,6 +3641,12 @@ body[dir="rtl"] .checkbox:checked,
   border-bottom: solid hsl(var(--b3));
 }
 
+.newInput{
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
 @media (min-width: 1024px) {
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
@@ -3648,4 +3656,3 @@ body[dir="rtl"] .checkbox:checked,
     text-align: left;
   }
 }
-

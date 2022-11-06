@@ -48,18 +48,21 @@
     </div>
   </div>
 </div>
+<div class="newInput">
+  <label for="my-modal-3">
+     <img src = "../src/plus.svg" alt = "add new" class="addNew btn-sm btn-square btn btn-outline">
+</label>
+</div>
 <body>
    <div class="containerBoy">
       <!-- navbar -->
       <div class="navbar bg-base-100 navis">
-        <div class="flex">
-          <a class="btn btn-ghost normal-case text-xl">todo+</a>
-        </div>
-        <div class="newInput">
-          <label for="my-modal-3">
-             <img src = "../src/plus.svg" alt = "add new" class="addNew btn-sm btn-square btn btn-outline">
-        </label>
-       </div>
+          <div class="flex">
+            <a class="btn btn-ghost normal-case text-xl">todo+</a>
+          </div>
+          <div class="form-control">
+            <input type="date" placeholder="today" class="input input-bordered" id = "datePicker"/>
+          </div>
         <div class="flex-none gap-2">
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
@@ -83,17 +86,14 @@
       <div class="main">
          <!-- sidebar -->
          <div class="sidebar">
-            <ul class="menu bg-base-100 w-46" id="sdSpacer">
+            <ul class="menu bg-base-100 w-36" id="sdSpacer">
                <div>
-                <div class="form-control">
-                  <input type="date" placeholder="today" class="input input-bordered" id = "datePicker"/>
-                </div>
                   <div id = "projQ">
                 </div>
                </div>
                <div>
-                  <div class="dropdown w-46 dropdown-top" id = "newProj">
-                     <label tabindex="0" class="btn m-2">New Project</label>
+                  <div class="dropdown w-36 dropdown-top" id = "newProj">
+                     <label tabindex="0" class="btn m-3">New Project</label>
                      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                        <li><div class="form-control">
                         <div class="input-group">
