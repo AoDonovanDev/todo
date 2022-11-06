@@ -68,6 +68,11 @@ function corporateSelect(){
   document.documentElement.setAttribute("data-theme", "corporate")
   saveTheme("corporate");
 }
+document.getElementById("darkTheme").addEventListener("click", darkSelect);
+function darkSelect(){
+  document.documentElement.setAttribute("data-theme", "dracula")
+  saveTheme("dracula");
+}
 function saveTheme(theme){
   localStorage.setItem("theme", JSON.stringify(theme));
 }
