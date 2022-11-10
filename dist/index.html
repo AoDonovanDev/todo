@@ -29,20 +29,41 @@
         <input id ="corporateTheme" type="radio" name="radio-10" class="radio radio-primary" />
       </label>
     </div>
-    <p class="text-xs py-6">built with daisUI</p>
+    <div class="form-control">
+      <label class="label cursor-pointer">
+        <span class="label-text">dark</span> 
+        <input id ="darkTheme" type="radio" name="radio-10" class="radio radio-primary" />
+      </label>
+    </div>
+    <p class="text-xs py-6">built with daisyUI</p>
   </label>
 </label>
+<input type="checkbox" id="my-modal-3" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box relative">
+    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2" id = "xout">✕</label>
+    <div class="modBtm">
+      <input type="text" placeholder="New Todo" class="input input-bordered w-full max-w-xs inputSpacer" id = "taskName"/>
+      <img src = "../src/plus.svg" alt = "add new" class="addNew btn-md btn-square btn btn-outline" id = "newTaskBtn" tabindex="0">
+    </div>
+  </div>
+</div>
+<div class="newInput">
+  <label for="my-modal-3">
+     <img src = "../src/plus.svg" alt = "add new" class="addNew btn-sm btn-square btn btn-outline">
+</label>
+</div>
 <body>
    <div class="containerBoy">
       <!-- navbar -->
-      <div class="navbar bg-base-100">
-        <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl">todo+</a>
-        </div>
-        <div class="flex-none gap-2">
+      <div class="navbar bg-base-100 navis">
+          <div class="flex">
+            <a class="btn btn-ghost normal-case text-xl">todo+</a>
+          </div>
           <div class="form-control">
             <input type="date" placeholder="today" class="input input-bordered" id = "datePicker"/>
           </div>
+        <div class="flex-none gap-2">
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
@@ -61,17 +82,18 @@
           </div>
         </div>
       </div>
+      <div class="myDivider"></div>
       <div class="main">
          <!-- sidebar -->
          <div class="sidebar">
-            <ul class="menu bg-base-100 w-56" id="sdSpacer">
+            <ul class="menu bg-base-100 w-36" id="sdSpacer">
                <div>
                   <div id = "projQ">
                 </div>
                </div>
                <div>
-                  <div class="dropdown w-56 dropdown-top" id = "newProj">
-                     <label tabindex="0" class="btn m-2">New Project</label>
+                  <div class="dropdown w-36 dropdown-top" id = "newProj">
+                     <label tabindex="0" class="btn m-3">New Project</label>
                      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                        <li><div class="form-control">
                         <div class="input-group">
@@ -92,24 +114,11 @@
              </div>
               <div class="hero">
                  <!-- hero -->
-                 <div class="card w-96 bg-base-100 shadow-xl">
-                   <div class="card-body btnCard">
-                     <h2 class="card-title">Add a task</h2>
-                      <div class="newInput">
-                        <input type="text" placeholder="Scrub your inputs..." class="input input-bordered w-full max-w-xs" id = "taskName"/>
-                        <div class="card-actions justify-end">
-                        <button class="btn-md btn-square btn btn-outline" id = "newTaskBtn">
-                           <img src = "../src/plus.svg" alt = "add new" class="addNew">
-                        </button>
-                      </div>
-                     </div>
-                   </div>
-                 </div>
               </div>
            </div>
          </div>
       </div>
    </div>
-    <script src = "main.js"></script>
+    <script src = "index.js"></script>
 </body>
 </html>
