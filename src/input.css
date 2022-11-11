@@ -38,13 +38,15 @@
     display: flex;
     flex-direction: column;
     flex:1;
-    justify-content: space-between;
     padding-top: 2%;
+      position: relative;
+      right: 8%;
 }
 .boardWrap{
     display: flex;
     flex-direction: column;
     flex:1;
+    align-items: center;
 }
 .taskLabel{
     display: grid;
@@ -119,8 +121,28 @@
     height: 0px;
     border-bottom: solid hsl(var(--b3));
 }
-.newInput{
+.newInputDesk{
     position: fixed;
-    bottom: 5%;
-    right: 5%;
+    bottom: 6%;
+    right: 45%;
+    z-index: 1;
+}
+.newBtnDesk{
+    height: 8em;
+    width: 8em;
+    @apply btn-square;
+    @apply btn;
+    @apply btn-outline;
+}
+.newBtnMobile{
+    @apply btn-square;
+    @apply btn;
+    @apply btn-outline;
+}
+.newInputMobile{
+    position: fixed;
+    right: 4%;
+    bottom: 4%;
+    height: 4em;
+    width: 4em;
 }

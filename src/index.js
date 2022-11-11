@@ -6,8 +6,10 @@ const taskName = document.getElementById('taskName');
 const newTaskBtn = document.getElementById('newTaskBtn');
 const newProjBtn = document.getElementById('newProjBtn');
 window.addEventListener('load', taskSet);
+window.addEventListener('load', displayScale);
+window.addEventListener('resize', displayScale);
 navBtns.forEach((element) => element.addEventListener('click', pageSelect));
- newTaskBtn.addEventListener('click', taskCreate); 
+newTaskBtn.addEventListener('click', taskCreate); 
 newProjBtn.addEventListener('click', projCreate);
 const taskController = (() => {
   const project = 'Today';
@@ -81,4 +83,14 @@ export function removeTask() {
   function updateDom(){
     domDisplay(taskController.taskList, taskController.project);
   }
+}
+function displayScale(){
+  if(window.innerWidth < 800){
+    document.getElementById("responsiveBtn").classList.remove("newInputDesk", "newBtnDesk");
+    document.getElementById("responsiveBtn").classList.add("newInputMobile", "newBtnMobile")
+  }else{
+    document.getElementById("responsiveBtn").classList.remove("newInputMobile", "newBtnMobile");
+    document.getElementById("responsiveBtn").classList.add("newInputDesk", "newBtnDesk")
+  }
+  console.log("rescale");
 }
