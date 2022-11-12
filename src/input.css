@@ -146,3 +146,11 @@
     height: 4em;
     width: 4em;
 }
+.newProjMobile{
+    position: fixed;
+    left: 2%;
+    bottom: 4%;
+}
+.newProjDesk{
+   margin-left: 3%;
+}

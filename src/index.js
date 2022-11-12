@@ -87,10 +87,14 @@ export function removeTask() {
 function displayScale(){
   if(window.innerWidth < 800){
     document.getElementById("responsiveBtn").classList.remove("newInputDesk", "newBtnDesk");
-    document.getElementById("responsiveBtn").classList.add("newInputMobile", "newBtnMobile")
+    document.getElementById("newProj").classList.remove("newProjDesk");
+    document.getElementById("responsiveBtn").classList.add("newInputMobile", "newBtnMobile");
+    document.getElementById("newProj").classList.add("newProjMobile");
   }else{
     document.getElementById("responsiveBtn").classList.remove("newInputMobile", "newBtnMobile");
-    document.getElementById("responsiveBtn").classList.add("newInputDesk", "newBtnDesk")
+    document.getElementById("newProj").classList.remove("newProjMobile");
+    document.getElementById("responsiveBtn").classList.add("newInputDesk", "newBtnDesk");
+    document.getElementById("newProj").classList.add("newProjDesk");
   }
   console.log("rescale");
 }
