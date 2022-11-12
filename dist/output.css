@@ -4666,14 +4666,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .newInputMobile{
   position: fixed;
-  right: 4%;
-  bottom: 4%;
+  right: 8%;
+  bottom: 8%;
   height: 4em;
   width: 4em;
-}
-
-#modalBtnIndex{
-  z-index: 6;
 }
 
 @media (min-width: 1024px) {
