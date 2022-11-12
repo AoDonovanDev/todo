@@ -4672,6 +4672,10 @@ body[dir="rtl"] .checkbox:checked,
   width: 4em;
 }
 
+#modalBtnIndex{
+  z-index: 6;
+}
+
 @media (min-width: 1024px) {
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
