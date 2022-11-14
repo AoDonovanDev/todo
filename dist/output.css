@@ -3423,10 +3423,6 @@ body[dir="rtl"] .checkbox:checked,
   cursor: pointer;
 }
 
-.resize {
-  resize: both;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -4161,6 +4157,10 @@ body[dir="rtl"] .checkbox:checked,
   color: hsl(var(--erc, var(--nc)) / var(--tw-text-opacity));
 }
 
+.newProjDesk{
+  margin-left: 3%;
+}
+
 .newBtnMobile {
   height: 3rem;
   width: 3rem;
@@ -4678,8 +4678,8 @@ body[dir="rtl"] .checkbox:checked,
   bottom: 4%;
 }
 
-.newProjDesk{
-  margin-left: 3%;
+#newProj{
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {

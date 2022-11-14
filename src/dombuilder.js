@@ -1,5 +1,6 @@
 import { pageSelect, removeTask } from './index.js';
 import {format} from 'date-fns';
+
 export function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -50,7 +51,10 @@ export function projManager(projName) {
 let calendar = document.getElementById("datePicker");
 calendar.value = format(new Date(), 'yyyy-MM-dd');
 calendar.onchange = function(){
+  if(calendar.value != ""){
   projManager(calendar.value);
+  }
+  console.log(calendar.value);
 }
 
 document.getElementById("gardenTheme").addEventListener("click", gardenSelect);
@@ -80,3 +84,19 @@ let checkTheme = localStorage.getItem("theme");
 if(checkTheme != null){
   document.documentElement.setAttribute("data-theme", JSON.parse(checkTheme));
 }
+window.addEventListener('load', displayScale);
+window.addEventListener('resize', displayScale);
+function displayScale(){
+  if(window.innerWidth < 800){
+    document.getElementById("responsiveBtn").classList.remove("newInputDesk", "newBtnDesk");
+    document.getElementById("newProj").classList.remove("newProjDesk");
+    document.getElementById("responsiveBtn").classList.add("newInputMobile", "newBtnMobile");
+    document.getElementById("newProj").classList.add("newProjMobile");
+  }else{
+    document.getElementById("responsiveBtn").classList.remove("newInputMobile", "newBtnMobile");
+    document.getElementById("newProj").classList.remove("newProjMobile");
+    document.getElementById("responsiveBtn").classList.add("newInputDesk", "newBtnDesk");
+    document.getElementById("newProj").classList.add("newProjDesk");
+  }
+}
+document.getElementById("homeBtn").addEventListener("click", () => location.reload());

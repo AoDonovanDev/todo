@@ -134,6 +134,9 @@
     @apply btn;
     @apply btn-outline;
 }
+.newProjDesk{
+    margin-left: 3%;
+ }
 .newBtnMobile{
     @apply btn-square;
     @apply btn;
@@ -151,6 +154,6 @@
     left: 2%;
     bottom: 4%;
 }
-.newProjDesk{
-   margin-left: 3%;
+#newProj{
+    z-index: 2;
 }
